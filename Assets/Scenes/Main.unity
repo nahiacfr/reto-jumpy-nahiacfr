@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.6356718, g: 0.8861587, b: 0.9148889, a: 1}
+  m_IndirectSpecularColor: {r: 0.6356694, g: 0.8861563, b: 0.9148876, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -205,8 +205,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  platformCollider: {fileID: 0}
 --- !u!65 &75548508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -302,8 +300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  platformCollider: {fileID: 0}
 --- !u!65 &92890324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -399,8 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  platformCollider: {fileID: 0}
 --- !u!65 &156018603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -414,6 +408,41 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5313249, y: 2.5313249, z: 0.275723}
   m_Center: {x: -0.000000059604645, y: -0.00000011920929, z: 0.13731049}
+--- !u!1 &605979825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9190304657509049344, guid: 13aca049c67820644ba390980277e1e1, type: 3}
+  m_PrefabInstance: {fileID: 3503230331243135894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &605979827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605979825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de6d76b79073209479630b953c57e2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 200
+  moveSpeed: 10
+--- !u!54 &605979829
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605979825}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &611291385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -496,8 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  platformCollider: {fileID: 0}
 --- !u!65 &611291388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -528,8 +555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1971008218}
-  platformCollider: {fileID: 0}
 --- !u!65 &664517487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -578,8 +603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 1971008218}
-  platformCollider: {fileID: 0}
 --- !u!4 &1218753020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3503230330313880170, guid: 13aca049c67820644ba390980277e1e1, type: 3}
@@ -680,8 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  platformCollider: {fileID: 0}
 --- !u!1 &1928588519
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,13 +732,6 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPlatform: {fileID: 2802741985686532469, guid: 27fbfe8d9c5cad849b686f83a8c69170, type: 3}
-  startHeight: 6
-  maxHeigh: 18
-  spacing: 3
-  minX: -3
-  maxX: 3
-  character: {fileID: 1971008218}
 --- !u!4 &1928588521
 Transform:
   m_ObjectHideFlags: 0

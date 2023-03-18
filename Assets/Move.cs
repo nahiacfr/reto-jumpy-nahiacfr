@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
     public int jumpForce = 200;
     [SerializeField]
     float moveSpeed = 10f;
+    public Transform foxTransform;
 
 
     // Start is called before the first frame update
@@ -30,26 +31,18 @@ public class Move : MonoBehaviour
     {
         if (canJump && Input.GetKeyDown(KeyCode.Space))
         {
-            riggidBody.AddForce(Vector3.back);
+            riggidBody.AddForce(Vector3.up * jumpForce);
+            canJump = false;
         }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             canJump = true;
         }
 
-    }
-    void OnTriggerExit(Collider other)
-    {
-
-        //other.gameObject.
-    }
-    void OnCollisionExit(Collision collision)
-    {
-        canJump = false;
     }
 
     private void Move1()
@@ -58,7 +51,8 @@ public class Move : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(horizontalInput, 0f, verticalInput);
-        transform.position += movement * moveSpeed * Time.deltaTime;
+        Vector3 newPosition = foxTransform.position + movement * moveSpeed * Time.deltaTime;
+        riggidBody.MovePosition(newPosition);
     }
 
 }
