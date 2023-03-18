@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 200
   moveSpeed: 10
+  foxTransform: {fileID: 1093326534}
 --- !u!54 &605979829
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -603,6 +604,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7c1ae190282bc489cdb213a7e42af5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1093326534 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7519150846259135533, guid: 13aca049c67820644ba390980277e1e1, type: 3}
+  m_PrefabInstance: {fileID: 3503230331243135894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1218753020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3503230330313880170, guid: 13aca049c67820644ba390980277e1e1, type: 3}
